@@ -1,0 +1,62 @@
+<section class="detail">
+    <h6 ng-if="comercio.category != ''" class="category">{{comercio.category | capitalize}}</h6>
+
+    <!-- Carrusel -->
+    <div class="carrusel" ng-if="comercio.photos.length > 0">
+        <ul class="imagenes">
+            <li ng-class='{active:$first}' ng-repeat="photo in comercio.photos" style="background:url({{photo.thumbnails.large}}) 50% 50% no-repeat; background-size:cover"></li>
+        </ul>
+
+        <div class="navigation-content" ng-if="comercio.photos.length > 1">
+            <ul class="navigation">
+                <li ng-class='{active:$first}' ng-repeat="photo in comercio.photos" ng-click="changeSlide($event, $index)"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="comercio">
+        <div class="logo" ng-if="comercio.logo.thumbnails.small != ''" style="background:url({{comercio.logo.thumbnails.small}}) 50% 50% no-repeat; background-size:cover;"></div>
+        <h2 ng-if="comercio.name != ''" class="title">{{comercio.name}}</h2>
+        <p><b>Teléfono:</b> {{comercio.contact.phone}}</p>
+        <p><b>Email:</b> <a ng-href="mailto:{{comercio.contact.email}}">{{comercio.contact.email}}</a></p>
+        <p><b>Website:</b> <a ng-href="{{comercio.contact.web}}" target="_blank">{{comercio.contact.web}}</a></p>
+        <span ng-if="comercio.social">
+            <span ng-if="getLength(comercio.social) > 0">
+                <b>Síguenos:</b>
+                <ul>
+                    <li ng-repeat="(key, value) in comercio.social">
+                        <a target="_blank" class="{{key}}" ng-href="{{value}}">{{key}}</a>
+                    </li>
+                </ul>
+            </span>
+        </span>
+    </div>
+
+
+    <span class="horario" ng-if="comercio.openingHours != '' && comercio.openingHours != '.'">
+            <h4>Horario:</h4>
+            <p class="opening">{{comercio.openingHours}}</p>
+        </span>
+
+
+    <ul class="facilities" ng-if="comercio.features.length > 0">
+        <h4>Servicios:</h4>
+        <li ng-repeat="feature in comercio.features">{{feature}}</li>
+    </ul>
+
+    <span class="description" ng-if="comercio.description != '' && comercio.description != '.'">
+            <h4>Descripción:</h4>
+            <p class="description">{{comercio.description}}</p>
+        </span>
+
+
+    <div class="mapa" ng-if="comercio.location.length > 1">
+        <h4>Ubicación:</h4>
+        <ng-map lat="{{comercio.location[1]}}" lng="{{comercio.location[0]}}" apikey="AIzaSyA3UVEXjauYchWlYws9VfIkQYX4t03Jds8" id="mapa"></ng-map>
+    </div>
+
+
+
+    <a ng-href="/">VOLVER</a>
+
+</section>

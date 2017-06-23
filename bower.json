@@ -1,0 +1,16 @@
+{
+  "name": "klikin",
+  "description": "Prueba front-end klikin",
+  "main": "index.js",
+  "authors": [
+    "Pablo González"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "frontend"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "angular-material": "^1.1.4"
+  }
+}

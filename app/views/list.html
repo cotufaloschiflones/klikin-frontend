@@ -1,0 +1,11 @@
+<section class="masonry">
+   <article ng-repeat="comercio in comercios" class="item">
+        <div class="photo" style="background:url({{comercio.logo.thumbnails.medium}}) 50% 50% no-repeat; background-size:cover;">
+
+        </div>
+        <h6 ng-if="comercio.category != ''" class="category">{{comercio.category | capitalize}}</h6>
+        <h3 ng-if="comercio.name != ''" class="title">{{comercio.name}}</h3>
+        <p ng-if="comercio.shortDescription != '' && comercio.shortDescription != '.' " class="description">{{comercio.shortDescription}}</p>
+        <a ng-href="/detail/{{comercio.name | prettyurl}}">VER COMERCIO</a>
+   </article>
+</section>

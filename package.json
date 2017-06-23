@@ -1,0 +1,39 @@
+{
+  "name": "klikin",
+  "version": "1.0.0",
+  "description": "Prueba front-end klikin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://cotufaloschiflones@bitbucket.org/cotufaloschiflones/klikin.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Pablo González",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/cotufaloschiflones/klikin#readme",
+  "dependencies": {
+    "angular-resource": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.2",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "serve-static": "^1.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "run-sequence": "^1.2.2"
+  }
+}
